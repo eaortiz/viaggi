@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3BD6AB717A46CDC006DB93C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6AB617A46CDC006DB93C /* UIKit.framework */; };
+		D3BD6AB917A46CDC006DB93C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6AB817A46CDC006DB93C /* Foundation.framework */; };
+		D3BD6ABB17A46CDC006DB93C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6ABA17A46CDC006DB93C /* CoreGraphics.framework */; };
+		D3BD6AC117A46CDC006DB93C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ABF17A46CDC006DB93C /* InfoPlist.strings */; };
+		D3BD6AC317A46CDC006DB93C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AC217A46CDC006DB93C /* main.m */; };
+		D3BD6AC717A46CDC006DB93C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AC617A46CDC006DB93C /* AppDelegate.m */; };
+		D3BD6AC917A46CDC006DB93C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6AC817A46CDC006DB93C /* Default.png */; };
+		D3BD6ACB17A46CDC006DB93C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ACA17A46CDC006DB93C /* Default@2x.png */; };
+		D3BD6ACD17A46CDC006DB93C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ACC17A46CDC006DB93C /* Default-568h@2x.png */; };
+		D3BD6AD017A46CDC006DB93C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ACE17A46CDC006DB93C /* MainStoryboard.storyboard */; };
+		D3BD6AD317A46CDC006DB93C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AD217A46CDC006DB93C /* FirstViewController.m */; };
+		D3BD6AD517A46CDC006DB93C /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6AD417A46CDC006DB93C /* first.png */; };
+		D3BD6AD717A46CDC006DB93C /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6AD617A46CDC006DB93C /* first@2x.png */; };
+		D3BD6ADA17A46CDC006DB93C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AD917A46CDC006DB93C /* SecondViewController.m */; };
+		D3BD6ADC17A46CDC006DB93C /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ADB17A46CDC006DB93C /* second.png */; };
+		D3BD6ADE17A46CDC006DB93C /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ADD17A46CDC006DB93C /* second@2x.png */; };
+		D3BD6AE617A46CDD006DB93C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6AE517A46CDD006DB93C /* SenTestingKit.framework */; };
+		D3BD6AE717A46CDD006DB93C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6AB617A46CDC006DB93C /* UIKit.framework */; };
+		D3BD6AE817A46CDD006DB93C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6AB817A46CDC006DB93C /* Foundation.framework */; };
+		D3BD6AF017A46CDD006DB93C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6AEE17A46CDD006DB93C /* InfoPlist.strings */; };
+		D3BD6AF317A46CDD006DB93C /* viaggiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AF217A46CDD006DB93C /* viaggiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3BD6AE917A46CDD006DB93C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3BD6AAB17A46CDC006DB93C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3BD6AB217A46CDC006DB93C;
+			remoteInfo = viaggi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D3BD6AB317A46CDC006DB93C /* viaggi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaggi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3BD6AB617A46CDC006DB93C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D3BD6AB817A46CDC006DB93C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D3BD6ABA17A46CDC006DB93C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D3BD6ABE17A46CDC006DB93C /* viaggi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "viaggi-Info.plist"; sourceTree = "<group>"; };
+		D3BD6AC017A46CDC006DB93C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D3BD6AC217A46CDC006DB93C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D3BD6AC417A46CDC006DB93C /* viaggi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "viaggi-Prefix.pch"; sourceTree = "<group>"; };
+		D3BD6AC517A46CDC006DB93C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D3BD6AC617A46CDC006DB93C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D3BD6AC817A46CDC006DB93C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D3BD6ACA17A46CDC006DB93C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D3BD6ACC17A46CDC006DB93C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D3BD6ACF17A46CDC006DB93C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D3BD6AD117A46CDC006DB93C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		D3BD6AD217A46CDC006DB93C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		D3BD6AD417A46CDC006DB93C /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		D3BD6AD617A46CDC006DB93C /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		D3BD6AD817A46CDC006DB93C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D3BD6AD917A46CDC006DB93C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D3BD6ADB17A46CDC006DB93C /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		D3BD6ADD17A46CDC006DB93C /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		D3BD6AE417A46CDD006DB93C /* viaggiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viaggiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3BD6AE517A46CDD006DB93C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D3BD6AED17A46CDD006DB93C /* viaggiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "viaggiTests-Info.plist"; sourceTree = "<group>"; };
+		D3BD6AEF17A46CDD006DB93C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D3BD6AF117A46CDD006DB93C /* viaggiTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = viaggiTests.h; sourceTree = "<group>"; };
+		D3BD6AF217A46CDD006DB93C /* viaggiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = viaggiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3BD6AB017A46CDC006DB93C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BD6AB717A46CDC006DB93C /* UIKit.framework in Frameworks */,
+				D3BD6AB917A46CDC006DB93C /* Foundation.framework in Frameworks */,
+				D3BD6ABB17A46CDC006DB93C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3BD6AE017A46CDD006DB93C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BD6AE617A46CDD006DB93C /* SenTestingKit.framework in Frameworks */,
+				D3BD6AE717A46CDD006DB93C /* UIKit.framework in Frameworks */,
+				D3BD6AE817A46CDD006DB93C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3BD6AAA17A46CDC006DB93C = {
+			isa = PBXGroup;
+			children = (
+				D3BD6ABC17A46CDC006DB93C /* viaggi */,
+				D3BD6AEB17A46CDD006DB93C /* viaggiTests */,
+				D3BD6AB517A46CDC006DB93C /* Frameworks */,
+				D3BD6AB417A46CDC006DB93C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3BD6AB417A46CDC006DB93C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD6AB317A46CDC006DB93C /* viaggi.app */,
+				D3BD6AE417A46CDD006DB93C /* viaggiTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3BD6AB517A46CDC006DB93C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD6AB617A46CDC006DB93C /* UIKit.framework */,
+				D3BD6AB817A46CDC006DB93C /* Foundation.framework */,
+				D3BD6ABA17A46CDC006DB93C /* CoreGraphics.framework */,
+				D3BD6AE517A46CDD006DB93C /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3BD6ABC17A46CDC006DB93C /* viaggi */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD6AC517A46CDC006DB93C /* AppDelegate.h */,
+				D3BD6AC617A46CDC006DB93C /* AppDelegate.m */,
+				D3BD6ACE17A46CDC006DB93C /* MainStoryboard.storyboard */,
+				D3BD6AD117A46CDC006DB93C /* FirstViewController.h */,
+				D3BD6AD217A46CDC006DB93C /* FirstViewController.m */,
+				D3BD6AD417A46CDC006DB93C /* first.png */,
+				D3BD6AD617A46CDC006DB93C /* first@2x.png */,
+				D3BD6AD817A46CDC006DB93C /* SecondViewController.h */,
+				D3BD6AD917A46CDC006DB93C /* SecondViewController.m */,
+				D3BD6ADB17A46CDC006DB93C /* second.png */,
+				D3BD6ADD17A46CDC006DB93C /* second@2x.png */,
+				D3BD6ABD17A46CDC006DB93C /* Supporting Files */,
+			);
+			path = viaggi;
+			sourceTree = "<group>";
+		};
+		D3BD6ABD17A46CDC006DB93C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD6ABE17A46CDC006DB93C /* viaggi-Info.plist */,
+				D3BD6ABF17A46CDC006DB93C /* InfoPlist.strings */,
+				D3BD6AC217A46CDC006DB93C /* main.m */,
+				D3BD6AC417A46CDC006DB93C /* viaggi-Prefix.pch */,
+				D3BD6AC817A46CDC006DB93C /* Default.png */,
+				D3BD6ACA17A46CDC006DB93C /* Default@2x.png */,
+				D3BD6ACC17A46CDC006DB93C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3BD6AEB17A46CDD006DB93C /* viaggiTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD6AF117A46CDD006DB93C /* viaggiTests.h */,
+				D3BD6AF217A46CDD006DB93C /* viaggiTests.m */,
+				D3BD6AEC17A46CDD006DB93C /* Supporting Files */,
+			);
+			path = viaggiTests;
+			sourceTree = "<group>";
+		};
+		D3BD6AEC17A46CDD006DB93C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD6AED17A46CDD006DB93C /* viaggiTests-Info.plist */,
+				D3BD6AEE17A46CDD006DB93C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3BD6AB217A46CDC006DB93C /* viaggi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3BD6AF617A46CDD006DB93C /* Build configuration list for PBXNativeTarget "viaggi" */;
+			buildPhases = (
+				D3BD6AAF17A46CDC006DB93C /* Sources */,
+				D3BD6AB017A46CDC006DB93C /* Frameworks */,
+				D3BD6AB117A46CDC006DB93C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = viaggi;
+			productName = viaggi;
+			productReference = D3BD6AB317A46CDC006DB93C /* viaggi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3BD6AE317A46CDD006DB93C /* viaggiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3BD6AF917A46CDD006DB93C /* Build configuration list for PBXNativeTarget "viaggiTests" */;
+			buildPhases = (
+				D3BD6ADF17A46CDD006DB93C /* Sources */,
+				D3BD6AE017A46CDD006DB93C /* Frameworks */,
+				D3BD6AE117A46CDD006DB93C /* Resources */,
+				D3BD6AE217A46CDD006DB93C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3BD6AEA17A46CDD006DB93C /* PBXTargetDependency */,
+			);
+			name = viaggiTests;
+			productName = viaggiTests;
+			productReference = D3BD6AE417A46CDD006DB93C /* viaggiTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3BD6AAB17A46CDC006DB93C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Estefanía Ortiz";
+			};
+			buildConfigurationList = D3BD6AAE17A46CDC006DB93C /* Build configuration list for PBXProject "viaggi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D3BD6AAA17A46CDC006DB93C;
+			productRefGroup = D3BD6AB417A46CDC006DB93C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3BD6AB217A46CDC006DB93C /* viaggi */,
+				D3BD6AE317A46CDD006DB93C /* viaggiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3BD6AB117A46CDC006DB93C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BD6AC117A46CDC006DB93C /* InfoPlist.strings in Resources */,
+				D3BD6AC917A46CDC006DB93C /* Default.png in Resources */,
+				D3BD6ACB17A46CDC006DB93C /* Default@2x.png in Resources */,
+				D3BD6ACD17A46CDC006DB93C /* Default-568h@2x.png in Resources */,
+				D3BD6AD017A46CDC006DB93C /* MainStoryboard.storyboard in Resources */,
+				D3BD6AD517A46CDC006DB93C /* first.png in Resources */,
+				D3BD6AD717A46CDC006DB93C /* first@2x.png in Resources */,
+				D3BD6ADC17A46CDC006DB93C /* second.png in Resources */,
+				D3BD6ADE17A46CDC006DB93C /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3BD6AE117A46CDD006DB93C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BD6AF017A46CDD006DB93C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D3BD6AE217A46CDD006DB93C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3BD6AAF17A46CDC006DB93C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BD6AC317A46CDC006DB93C /* main.m in Sources */,
+				D3BD6AC717A46CDC006DB93C /* AppDelegate.m in Sources */,
+				D3BD6AD317A46CDC006DB93C /* FirstViewController.m in Sources */,
+				D3BD6ADA17A46CDC006DB93C /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3BD6ADF17A46CDD006DB93C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BD6AF317A46CDD006DB93C /* viaggiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3BD6AEA17A46CDD006DB93C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3BD6AB217A46CDC006DB93C /* viaggi */;
+			targetProxy = D3BD6AE917A46CDD006DB93C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3BD6ABF17A46CDC006DB93C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3BD6AC017A46CDC006DB93C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D3BD6ACE17A46CDC006DB93C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3BD6ACF17A46CDC006DB93C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		D3BD6AEE17A46CDD006DB93C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3BD6AEF17A46CDD006DB93C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3BD6AF417A46CDD006DB93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D3BD6AF517A46CDD006DB93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3BD6AF717A46CDD006DB93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "viaggi/viaggi-Prefix.pch";
+				INFOPLIST_FILE = "viaggi/viaggi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D3BD6AF817A46CDD006DB93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "viaggi/viaggi-Prefix.pch";
+				INFOPLIST_FILE = "viaggi/viaggi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D3BD6AFA17A46CDD006DB93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/viaggi.app/viaggi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "viaggi/viaggi-Prefix.pch";
+				INFOPLIST_FILE = "viaggiTests/viaggiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D3BD6AFB17A46CDD006DB93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/viaggi.app/viaggi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "viaggi/viaggi-Prefix.pch";
+				INFOPLIST_FILE = "viaggiTests/viaggiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3BD6AAE17A46CDC006DB93C /* Build configuration list for PBXProject "viaggi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3BD6AF417A46CDD006DB93C /* Debug */,
+				D3BD6AF517A46CDD006DB93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3BD6AF617A46CDD006DB93C /* Build configuration list for PBXNativeTarget "viaggi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3BD6AF717A46CDD006DB93C /* Debug */,
+				D3BD6AF817A46CDD006DB93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D3BD6AF917A46CDD006DB93C /* Build configuration list for PBXNativeTarget "viaggiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3BD6AFA17A46CDD006DB93C /* Debug */,
+				D3BD6AFB17A46CDD006DB93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3BD6AAB17A46CDC006DB93C /* Project object */;
+}
