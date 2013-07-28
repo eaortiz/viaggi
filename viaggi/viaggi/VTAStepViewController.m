@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  VTAStepViewController.m
 //  viaggi
 //
 //  Created by Estefanía Ortiz on 7/27/13.
 //  Copyright (c) 2013 Estefanía Ortiz. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "VTAStepViewController.h"
 
-@interface SecondViewController ()
+@interface VTAStepViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation VTAStepViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -17,10 +17,10 @@
 		D3BD6ACB17A46CDC006DB93C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ACA17A46CDC006DB93C /* Default@2x.png */; };
 		D3BD6ACD17A46CDC006DB93C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ACC17A46CDC006DB93C /* Default-568h@2x.png */; };
 		D3BD6AD017A46CDC006DB93C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ACE17A46CDC006DB93C /* MainStoryboard.storyboard */; };
-		D3BD6AD317A46CDC006DB93C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AD217A46CDC006DB93C /* FirstViewController.m */; };
+		D3BD6AD317A46CDC006DB93C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AD217A46CDC006DB93C /* HomeViewController.m */; };
 		D3BD6AD517A46CDC006DB93C /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6AD417A46CDC006DB93C /* first.png */; };
 		D3BD6AD717A46CDC006DB93C /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6AD617A46CDC006DB93C /* first@2x.png */; };
-		D3BD6ADA17A46CDC006DB93C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AD917A46CDC006DB93C /* SecondViewController.m */; };
+		D3BD6ADA17A46CDC006DB93C /* NewTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AD917A46CDC006DB93C /* NewTripViewController.m */; };
 		D3BD6ADC17A46CDC006DB93C /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ADB17A46CDC006DB93C /* second.png */; };
 		D3BD6ADE17A46CDC006DB93C /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6ADD17A46CDC006DB93C /* second@2x.png */; };
 		D3BD6AE617A46CDD006DB93C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6AE517A46CDD006DB93C /* SenTestingKit.framework */; };
@@ -28,6 +28,18 @@
 		D3BD6AE817A46CDD006DB93C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6AB817A46CDC006DB93C /* Foundation.framework */; };
 		D3BD6AF017A46CDD006DB93C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3BD6AEE17A46CDD006DB93C /* InfoPlist.strings */; };
 		D3BD6AF317A46CDD006DB93C /* viaggiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AF217A46CDD006DB93C /* viaggiTests.m */; };
+		D3BD6AFE17A4AEA0006DB93C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AFD17A4AEA0006DB93C /* SecondViewController.m */; };
+		D3BD6B0117A4C3C8006DB93C /* ViaggiModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6AFF17A4C3C8006DB93C /* ViaggiModel.xcdatamodeld */; };
+		D3BD6B0417A4CB9D006DB93C /* StepsMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6B0317A4CB9D006DB93C /* StepsMenuViewController.m */; };
+		D3BD6B0717A4CC21006DB93C /* CaltrainStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6B0617A4CC21006DB93C /* CaltrainStepViewController.m */; };
+		D3BD6B0A17A4CC2C006DB93C /* MuniStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6B0917A4CC2C006DB93C /* MuniStepViewController.m */; };
+		D3BD6B0D17A4CC4E006DB93C /* WalkStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6B0C17A4CC4E006DB93C /* WalkStepViewController.m */; };
+		D3BD6B1017A4CC7F006DB93C /* BartStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6B0F17A4CC7F006DB93C /* BartStepViewController.m */; };
+		D3BD6B1317A4CC8C006DB93C /* VTAStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6B1217A4CC8C006DB93C /* VTAStepViewController.m */; };
+		D3BD6B1617A4CCAA006DB93C /* CustomStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6B1517A4CCAA006DB93C /* CustomStepViewController.m */; };
+		D3BD6B1A17A4D8F5006DB93C /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6B1917A4D8F5006DB93C /* Step.m */; };
+		D3BD6B1D17A4D8F5006DB93C /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BD6B1C17A4D8F5006DB93C /* Trip.m */; };
+		D3BD6B4D17A4E056006DB93C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6B4C17A4E056006DB93C /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +67,12 @@
 		D3BD6ACA17A46CDC006DB93C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D3BD6ACC17A46CDC006DB93C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D3BD6ACF17A46CDC006DB93C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		D3BD6AD117A46CDC006DB93C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		D3BD6AD217A46CDC006DB93C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		D3BD6AD117A46CDC006DB93C /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D3BD6AD217A46CDC006DB93C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		D3BD6AD417A46CDC006DB93C /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		D3BD6AD617A46CDC006DB93C /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		D3BD6AD817A46CDC006DB93C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		D3BD6AD917A46CDC006DB93C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D3BD6AD817A46CDC006DB93C /* NewTripViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTripViewController.h; sourceTree = "<group>"; };
+		D3BD6AD917A46CDC006DB93C /* NewTripViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTripViewController.m; sourceTree = "<group>"; };
 		D3BD6ADB17A46CDC006DB93C /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		D3BD6ADD17A46CDC006DB93C /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		D3BD6AE417A46CDD006DB93C /* viaggiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viaggiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +81,28 @@
 		D3BD6AEF17A46CDD006DB93C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3BD6AF117A46CDD006DB93C /* viaggiTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = viaggiTests.h; sourceTree = "<group>"; };
 		D3BD6AF217A46CDD006DB93C /* viaggiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = viaggiTests.m; sourceTree = "<group>"; };
+		D3BD6AFC17A4AEA0006DB93C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D3BD6AFD17A4AEA0006DB93C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D3BD6B0017A4C3C8006DB93C /* ViaggiModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViaggiModel.xcdatamodel; sourceTree = "<group>"; };
+		D3BD6B0217A4CB9D006DB93C /* StepsMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepsMenuViewController.h; sourceTree = "<group>"; };
+		D3BD6B0317A4CB9D006DB93C /* StepsMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepsMenuViewController.m; sourceTree = "<group>"; };
+		D3BD6B0517A4CC21006DB93C /* CaltrainStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaltrainStepViewController.h; sourceTree = "<group>"; };
+		D3BD6B0617A4CC21006DB93C /* CaltrainStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaltrainStepViewController.m; sourceTree = "<group>"; };
+		D3BD6B0817A4CC2C006DB93C /* MuniStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuniStepViewController.h; sourceTree = "<group>"; };
+		D3BD6B0917A4CC2C006DB93C /* MuniStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuniStepViewController.m; sourceTree = "<group>"; };
+		D3BD6B0B17A4CC4E006DB93C /* WalkStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkStepViewController.h; sourceTree = "<group>"; };
+		D3BD6B0C17A4CC4E006DB93C /* WalkStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkStepViewController.m; sourceTree = "<group>"; };
+		D3BD6B0E17A4CC7F006DB93C /* BartStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BartStepViewController.h; sourceTree = "<group>"; };
+		D3BD6B0F17A4CC7F006DB93C /* BartStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BartStepViewController.m; sourceTree = "<group>"; };
+		D3BD6B1117A4CC8C006DB93C /* VTAStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAStepViewController.h; sourceTree = "<group>"; };
+		D3BD6B1217A4CC8C006DB93C /* VTAStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAStepViewController.m; sourceTree = "<group>"; };
+		D3BD6B1417A4CCAA006DB93C /* CustomStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomStepViewController.h; sourceTree = "<group>"; };
+		D3BD6B1517A4CCAA006DB93C /* CustomStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomStepViewController.m; sourceTree = "<group>"; };
+		D3BD6B1817A4D8F5006DB93C /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
+		D3BD6B1917A4D8F5006DB93C /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step.m; sourceTree = "<group>"; };
+		D3BD6B1B17A4D8F5006DB93C /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		D3BD6B1C17A4D8F5006DB93C /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		D3BD6B4C17A4E056006DB93C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BD6B4D17A4E056006DB93C /* CoreData.framework in Frameworks */,
 				D3BD6AB717A46CDC006DB93C /* UIKit.framework in Frameworks */,
 				D3BD6AB917A46CDC006DB93C /* Foundation.framework in Frameworks */,
 				D3BD6ABB17A46CDC006DB93C /* CoreGraphics.framework in Frameworks */,
@@ -98,6 +133,7 @@
 		D3BD6AAA17A46CDC006DB93C = {
 			isa = PBXGroup;
 			children = (
+				D3BD6B4C17A4E056006DB93C /* CoreData.framework */,
 				D3BD6ABC17A46CDC006DB93C /* viaggi */,
 				D3BD6AEB17A46CDD006DB93C /* viaggiTests */,
 				D3BD6AB517A46CDC006DB93C /* Frameworks */,
@@ -128,16 +164,34 @@
 		D3BD6ABC17A46CDC006DB93C /* viaggi */ = {
 			isa = PBXGroup;
 			children = (
+				D3BD6B1717A4D8D5006DB93C /* Models */,
+				D3BD6B0217A4CB9D006DB93C /* StepsMenuViewController.h */,
+				D3BD6B0317A4CB9D006DB93C /* StepsMenuViewController.m */,
 				D3BD6AC517A46CDC006DB93C /* AppDelegate.h */,
 				D3BD6AC617A46CDC006DB93C /* AppDelegate.m */,
 				D3BD6ACE17A46CDC006DB93C /* MainStoryboard.storyboard */,
-				D3BD6AD117A46CDC006DB93C /* FirstViewController.h */,
-				D3BD6AD217A46CDC006DB93C /* FirstViewController.m */,
+				D3BD6B0517A4CC21006DB93C /* CaltrainStepViewController.h */,
+				D3BD6B0617A4CC21006DB93C /* CaltrainStepViewController.m */,
+				D3BD6B0817A4CC2C006DB93C /* MuniStepViewController.h */,
+				D3BD6B0917A4CC2C006DB93C /* MuniStepViewController.m */,
+				D3BD6B0B17A4CC4E006DB93C /* WalkStepViewController.h */,
+				D3BD6B0C17A4CC4E006DB93C /* WalkStepViewController.m */,
+				D3BD6B0E17A4CC7F006DB93C /* BartStepViewController.h */,
+				D3BD6B0F17A4CC7F006DB93C /* BartStepViewController.m */,
+				D3BD6B1117A4CC8C006DB93C /* VTAStepViewController.h */,
+				D3BD6B1217A4CC8C006DB93C /* VTAStepViewController.m */,
+				D3BD6B1417A4CCAA006DB93C /* CustomStepViewController.h */,
+				D3BD6B1517A4CCAA006DB93C /* CustomStepViewController.m */,
+				D3BD6AFF17A4C3C8006DB93C /* ViaggiModel.xcdatamodeld */,
+				D3BD6AD117A46CDC006DB93C /* HomeViewController.h */,
+				D3BD6AD217A46CDC006DB93C /* HomeViewController.m */,
 				D3BD6AD417A46CDC006DB93C /* first.png */,
 				D3BD6AD617A46CDC006DB93C /* first@2x.png */,
-				D3BD6AD817A46CDC006DB93C /* SecondViewController.h */,
-				D3BD6AD917A46CDC006DB93C /* SecondViewController.m */,
+				D3BD6AD817A46CDC006DB93C /* NewTripViewController.h */,
+				D3BD6AD917A46CDC006DB93C /* NewTripViewController.m */,
 				D3BD6ADB17A46CDC006DB93C /* second.png */,
+				D3BD6AFC17A4AEA0006DB93C /* SecondViewController.h */,
+				D3BD6AFD17A4AEA0006DB93C /* SecondViewController.m */,
 				D3BD6ADD17A46CDC006DB93C /* second@2x.png */,
 				D3BD6ABD17A46CDC006DB93C /* Supporting Files */,
 			);
@@ -175,6 +229,17 @@
 				D3BD6AEE17A46CDD006DB93C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3BD6B1717A4D8D5006DB93C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD6B1B17A4D8F5006DB93C /* Trip.h */,
+				D3BD6B1C17A4D8F5006DB93C /* Trip.m */,
+				D3BD6B1817A4D8F5006DB93C /* Step.h */,
+				D3BD6B1917A4D8F5006DB93C /* Step.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,8 +358,19 @@
 			files = (
 				D3BD6AC317A46CDC006DB93C /* main.m in Sources */,
 				D3BD6AC717A46CDC006DB93C /* AppDelegate.m in Sources */,
-				D3BD6AD317A46CDC006DB93C /* FirstViewController.m in Sources */,
-				D3BD6ADA17A46CDC006DB93C /* SecondViewController.m in Sources */,
+				D3BD6AD317A46CDC006DB93C /* HomeViewController.m in Sources */,
+				D3BD6ADA17A46CDC006DB93C /* NewTripViewController.m in Sources */,
+				D3BD6AFE17A4AEA0006DB93C /* SecondViewController.m in Sources */,
+				D3BD6B0117A4C3C8006DB93C /* ViaggiModel.xcdatamodeld in Sources */,
+				D3BD6B0417A4CB9D006DB93C /* StepsMenuViewController.m in Sources */,
+				D3BD6B0717A4CC21006DB93C /* CaltrainStepViewController.m in Sources */,
+				D3BD6B0A17A4CC2C006DB93C /* MuniStepViewController.m in Sources */,
+				D3BD6B0D17A4CC4E006DB93C /* WalkStepViewController.m in Sources */,
+				D3BD6B1017A4CC7F006DB93C /* BartStepViewController.m in Sources */,
+				D3BD6B1317A4CC8C006DB93C /* VTAStepViewController.m in Sources */,
+				D3BD6B1617A4CCAA006DB93C /* CustomStepViewController.m in Sources */,
+				D3BD6B1A17A4D8F5006DB93C /* Step.m in Sources */,
+				D3BD6B1D17A4D8F5006DB93C /* Trip.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +561,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3BD6AFF17A4C3C8006DB93C /* ViaggiModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3BD6B0017A4C3C8006DB93C /* ViaggiModel.xcdatamodel */,
+			);
+			currentVersion = D3BD6B0017A4C3C8006DB93C /* ViaggiModel.xcdatamodel */;
+			path = ViaggiModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D3BD6AAB17A46CDC006DB93C /* Project object */;
 }

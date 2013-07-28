@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  CustomStepViewController.m
 //  viaggi
 //
 //  Created by Estefanía Ortiz on 7/27/13.
 //  Copyright (c) 2013 Estefanía Ortiz. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "CustomStepViewController.h"
 
-@interface SecondViewController ()
+@interface CustomStepViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation CustomStepViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
