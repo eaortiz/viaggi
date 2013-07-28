@@ -1,10 +1,23 @@
 <?php
 
-class getRouteInformation
+class routeInformationGetter
 {
+    public static final $googleMapsDirection = "http://maps.googleapis.com/maps/api/directions_json?"; 
+    public $parameters;
+
     public function __construct ()
     {
+        $this->parameters = $_GET;
+    }
 
+    public function returnResponse ()
+    {
+        switch ($this->parameters["action"]) {
+            case "startTime":
+                break;
+            case "endTime":
+                break;
+        }
     }
 
     public function getCaltrainInformation ()
@@ -28,4 +41,6 @@ class getRouteInformation
     }
 }
 
+routeInformationGetter getter = new routeInformationGetter();
+getter->returnResponse();
 ?>
