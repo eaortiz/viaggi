@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  WalkStepViewController.m
 //  viaggi
 //
 //  Created by Estefanía Ortiz on 7/27/13.
 //  Copyright (c) 2013 Estefanía Ortiz. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "WalkStepViewController.h"
 
-@interface SecondViewController ()
+@interface WalkStepViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation WalkStepViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
