@@ -10,7 +10,6 @@
 
 @interface HomeViewController : UIViewController {
     UILabel *titleLabel;
-    UIButton *newTrip;
 }
 @property(nonatomic, retain) IBOutlet UILabel *titleLabel;
 -(IBAction) createNewTrip:(id)sender;

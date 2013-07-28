@@ -7,9 +7,9 @@
         <!--Home View Controller - Home-->
         <scene sceneID="11">
             <objects>
-                <viewController title="Home" id="2" userLabel="Home View Controller - Home" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeapp" title="Home" id="2" userLabel="Home View Controller - Home" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -35,7 +35,7 @@
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Trip Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQ2-0s-ACK">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="vcH-KQ-uiP"/>
+                                    <constraint firstAttribute="height" constant="28" id="saa-Ls-fto"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -54,6 +54,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setWeekDay:" destination="35B-DM-fj4" eventType="touchUpInside" id="bZ5-Rk-xbU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZh-XF-HoM">
                                 <constraints>
@@ -67,6 +70,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setWeekDay:" destination="35B-DM-fj4" eventType="touchUpInside" id="eyO-7M-YH1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vy-33-q8v">
                                 <constraints>
@@ -80,6 +86,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setWeekDay:" destination="35B-DM-fj4" eventType="touchUpInside" id="hbV-uE-m99"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFU-gb-dgm">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -91,24 +100,54 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="addStep:" destination="35B-DM-fj4" eventType="touchUpInside" id="QKF-cZ-B8E"/>
                                     <segue destination="1Tu-04-p9o" kind="modal" id="Wei-Xo-aaW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-ah-t2N">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="Ybe-jV-ryr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createNewTrip:" destination="35B-DM-fj4" eventType="touchDown" id="lc9-N1-ZYe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="3e2-4J-1w5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="302" id="wxO-hT-2qQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="VFU-gb-dgm" firstAttribute="top" secondItem="jNh-lP-wX3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2ja-cL-wO9"/>
+                            <constraint firstItem="3e2-4J-1w5" firstAttribute="bottom" secondItem="Jwg-eS-3or" secondAttribute="bottom" type="default" id="5M8-6a-v1w"/>
                             <constraint firstItem="6vy-33-q8v" firstAttribute="top" secondItem="ZZh-XF-HoM" secondAttribute="top" type="default" id="6Gx-aW-Ago"/>
                             <constraint firstItem="jNh-lP-wX3" firstAttribute="leading" secondItem="Jwg-eS-3or" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9EZ-gA-4no"/>
+                            <constraint firstItem="zh6-ah-t2N" firstAttribute="centerY" secondItem="NQ2-0s-ACK" secondAttribute="centerY" type="default" id="FzC-Bw-FMj"/>
+                            <constraint firstItem="zh6-ah-t2N" firstAttribute="top" secondItem="Jwg-eS-3or" secondAttribute="top" constant="58" id="H0O-aK-gXw"/>
                             <constraint firstItem="VFU-gb-dgm" firstAttribute="leading" secondItem="Jwg-eS-3or" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HRe-ai-nEK"/>
                             <constraint firstItem="ZZh-XF-HoM" firstAttribute="top" secondItem="jNh-lP-wX3" secondAttribute="top" type="default" id="JH4-le-kvf"/>
-                            <constraint firstItem="NQ2-0s-ACK" firstAttribute="top" secondItem="Jwg-eS-3or" secondAttribute="top" constant="65" id="LKc-cN-ynR"/>
+                            <constraint firstItem="3e2-4J-1w5" firstAttribute="trailing" secondItem="Jwg-eS-3or" secondAttribute="trailing" type="default" id="LED-jj-era"/>
+                            <constraint firstAttribute="trailing" secondItem="zh6-ah-t2N" secondAttribute="trailing" constant="30" id="RUi-wj-X9G"/>
                             <constraint firstItem="NQ2-0s-ACK" firstAttribute="leading" secondItem="Jwg-eS-3or" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="a58-XU-sJv"/>
                             <constraint firstAttribute="trailing" secondItem="NQ2-0s-ACK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="a8m-VK-MPi"/>
                             <constraint firstAttribute="trailing" secondItem="VFU-gb-dgm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lF8-96-deT"/>
                             <constraint firstAttribute="trailing" secondItem="6vy-33-q8v" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="n8c-Qe-VkH"/>
                             <constraint firstItem="VFU-gb-dgm" firstAttribute="top" secondItem="6vy-33-q8v" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sgF-GD-Nuj"/>
                             <constraint firstItem="jNh-lP-wX3" firstAttribute="top" secondItem="Jwg-eS-3or" secondAttribute="top" constant="112" id="ud8-bp-rq7"/>
+                            <constraint firstItem="3e2-4J-1w5" firstAttribute="leading" secondItem="Jwg-eS-3or" secondAttribute="leading" type="default" id="vrP-Q8-dNI"/>
                             <constraint firstItem="px7-i9-Smh" firstAttribute="leading" secondItem="Jwg-eS-3or" secondAttribute="leading" type="default" id="vtF-aw-zeR"/>
                             <constraint firstItem="ZZh-XF-HoM" firstAttribute="centerX" secondItem="NQ2-0s-ACK" secondAttribute="centerX" type="default" id="wPk-EC-SyR"/>
                             <constraint firstItem="px7-i9-Smh" firstAttribute="trailing" secondItem="Jwg-eS-3or" secondAttribute="trailing" type="default" id="ykF-O4-xMe"/>
@@ -117,6 +156,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="bzF-b7-svJ"/>
+                    <connections>
+                        <outlet property="nameInput" destination="NQ2-0s-ACK" id="xgQ-Pk-EB0"/>
+                        <outlet property="saturdayButton" destination="ZZh-XF-HoM" id="Hoa-Zs-Q3b"/>
+                        <outlet property="sundayButton" destination="6vy-33-q8v" id="NYH-zu-7Od"/>
+                        <outlet property="textLabel" destination="3e2-4J-1w5" id="V9x-BE-K3B"/>
+                        <outlet property="weekdayButton" destination="jNh-lP-wX3" id="2Qe-Xk-I8g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFo-za-qzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,10 +292,10 @@
             </objects>
             <point key="canvasLocation" x="1929" y="-137"/>
         </scene>
-        <!--View Controller-->
+        <!--Caltrain Step View Controller - Caltrain View Controller-->
         <scene sceneID="wuT-W5-9SD">
             <objects>
-                <viewController id="jde-th-OkO" sceneMemberID="viewController">
+                <viewController title="Caltrain View Controller" id="jde-th-OkO" customClass="CaltrainStepViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x1t-kP-hp2">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -285,12 +331,12 @@
                                 </constraints>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Minute" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqS-uk-Iwo">
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKy-ML-zaB">
                                 <constraints>
@@ -305,6 +351,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectTimeType:" destination="jde-th-OkO" eventType="touchUpInside" id="lPA-KF-Vlj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVO-66-UGv">
                                 <constraints>
@@ -348,6 +397,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectTimeType:" destination="jde-th-OkO" eventType="touchUpInside" id="QnC-Mv-A3K"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qs2-B6-WcL">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -358,6 +410,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveStep:" destination="jde-th-OkO" eventType="touchUpInside" id="7GQ-9I-bZY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -394,6 +449,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L2Q-wa-axs"/>
+                    <connections>
+                        <outlet property="arriveBy" destination="rKy-ML-zaB" id="ZIY-it-naX"/>
+                        <outlet property="departAt" destination="6bt-1z-ppG" id="b5v-CQ-Y07"/>
+                        <outlet property="endLocation" destination="wzH-9f-Y5r" id="MA0-8L-G5H"/>
+                        <outlet property="hour" destination="TCh-vk-L3G" id="Nke-4m-dVm"/>
+                        <outlet property="minute" destination="DqS-uk-Iwo" id="X0Q-cg-iwP"/>
+                        <outlet property="startLocation" destination="TdG-VR-SC9" id="VGc-M1-Qk6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1M-tf-Rd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -435,7 +498,91 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="509" y="570"/>
+        </scene>
+        <!--Trip View Controller-->
+        <scene sceneID="N4e-8i-5UH">
+            <objects>
+                <viewController storyboardIdentifier="awesomesauce" id="cvT-ms-36c" customClass="TripViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qbd-Cy-Axm">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="M5m-YD-VjZ">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSv-Ap-8yp">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="vJI-xi-t4p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="remove:" destination="cvT-ms-36c" eventType="touchUpInside" id="OgC-oL-x1D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnJ-7z-w3c">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="nLM-rU-Fzd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="cvT-ms-36c" eventType="touchUpInside" id="FO7-OX-2Dx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9g-7g-hwc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="6ne-VK-3W3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2" kind="modal" id="p2b-Z7-xig"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AnJ-7z-w3c" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="1Si-Vg-9m0"/>
+                            <constraint firstAttribute="bottom" secondItem="I9g-7g-hwc" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="2ND-e5-07b"/>
+                            <constraint firstAttribute="bottom" secondItem="VSv-Ap-8yp" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Ed7-Lc-bgL"/>
+                            <constraint firstItem="M5m-YD-VjZ" firstAttribute="top" secondItem="qbd-Cy-Axm" secondAttribute="top" type="default" id="GIw-QZ-JEc"/>
+                            <constraint firstItem="M5m-YD-VjZ" firstAttribute="bottom" secondItem="qbd-Cy-Axm" secondAttribute="bottom" type="default" id="MyO-dT-vvM"/>
+                            <constraint firstItem="AnJ-7z-w3c" firstAttribute="centerX" secondItem="M5m-YD-VjZ" secondAttribute="centerX" type="default" id="b0K-bP-Ljc"/>
+                            <constraint firstItem="M5m-YD-VjZ" firstAttribute="leading" secondItem="qbd-Cy-Axm" secondAttribute="leading" type="default" id="lnF-9p-DJ1"/>
+                            <constraint firstItem="M5m-YD-VjZ" firstAttribute="trailing" secondItem="qbd-Cy-Axm" secondAttribute="trailing" type="default" id="u7A-Te-JwR"/>
+                            <constraint firstItem="VSv-Ap-8yp" firstAttribute="leading" secondItem="qbd-Cy-Axm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wln-wM-Bmk"/>
+                            <constraint firstAttribute="trailing" secondItem="I9g-7g-hwc" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xMZ-qX-S1q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tripText" destination="M5m-YD-VjZ" id="Dgu-l9-uJt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SR1-7K-hxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="467"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -456,10 +603,10 @@
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--Bart View Controller-->
+        <!--Bart Step View Controller-->
         <scene sceneID="Mmo-Om-3aH">
             <objects>
-                <viewController id="D6N-LP-zkF" customClass="BartViewController" sceneMemberID="viewController">
+                <viewController id="D6N-LP-zkF" customClass="BartStepViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IaC-nK-v5v">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -529,6 +676,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectTimeType:" destination="D6N-LP-zkF" eventType="touchUpInside" id="Cc0-zx-0zP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTx-LP-lt0">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -539,6 +689,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectTimeType:" destination="D6N-LP-zkF" eventType="touchUpInside" id="Y0L-Uh-5Nd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAs-HJ-cpQ">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -549,6 +702,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveStep:" destination="D6N-LP-zkF" eventType="touchUpInside" id="aYo-ms-dsn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5G-I7-oGL">
                                 <constraints>
@@ -601,15 +757,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ktC-Am-OnB"/>
+                    <connections>
+                        <outlet property="arriveBy" destination="YTB-EH-wBu" id="GPP-Ij-Jdb"/>
+                        <outlet property="departAt" destination="YTx-LP-lt0" id="Hff-FV-mg1"/>
+                        <outlet property="endLocation" destination="EhV-SE-Dnb" id="GIg-4P-1ie"/>
+                        <outlet property="hour" destination="cek-zn-8qR" id="OIq-cZ-cCL"/>
+                        <outlet property="minute" destination="aM4-c9-Hna" id="L2j-nr-zM0"/>
+                        <outlet property="startLocation" destination="6AK-FP-fb5" id="uyu-RM-VC4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IkH-hF-fNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2706" y="-806"/>
         </scene>
-        <!--View Controller-->
+        <!--Muni Step View Controller - MuniStepViewController-->
         <scene sceneID="c3r-G5-z8J">
             <objects>
-                <viewController id="K34-Dm-pVV" sceneMemberID="viewController">
+                <viewController title="MuniStepViewController" id="K34-Dm-pVV" customClass="MuniStepViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hkC-q1-SVx">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -676,6 +840,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectTimeType:" destination="K34-Dm-pVV" eventType="touchUpInside" id="yAh-ln-M4V"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0J-GD-VnD">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -686,6 +853,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectTimeType:" destination="K34-Dm-pVV" eventType="touchUpInside" id="Qej-FU-WX4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3K-Sg-j8a">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -696,6 +866,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveStep:" destination="K34-Dm-pVV" eventType="touchUpInside" id="Cym-CY-U5c"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPd-cF-cWo">
                                 <constraints>
@@ -749,15 +922,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8HW-DG-QSd"/>
+                    <connections>
+                        <outlet property="arriveBy" destination="A4j-3c-Cdf" id="uyw-iF-vSE"/>
+                        <outlet property="departAt" destination="B0J-GD-VnD" id="wa7-RQ-vgt"/>
+                        <outlet property="endLocation" destination="uCc-iU-9hF" id="YQF-U8-Flw"/>
+                        <outlet property="hour" destination="XQr-Sk-v7D" id="qff-Pb-aJv"/>
+                        <outlet property="minute" destination="hNy-s0-yqs" id="nkT-sU-Vuh"/>
+                        <outlet property="startLocation" destination="bRW-El-WCR" id="DDr-rU-0ZJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLy-Z0-hx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1263" y="650"/>
         </scene>
-        <!--View Controller-->
+        <!--Step View Controller-->
         <scene sceneID="zxk-9q-DCP">
             <objects>
-                <viewController id="bgW-1Y-Jyz" sceneMemberID="viewController">
+                <viewController id="bgW-1Y-Jyz" customClass="VTAStepViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ddp-kH-zGo">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -811,6 +992,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectTimeType:" destination="bgW-1Y-Jyz" eventType="touchUpInside" id="hIV-c0-r3m"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELf-6e-WEB">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -821,6 +1005,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectTimeType:" destination="bgW-1Y-Jyz" eventType="touchUpInside" id="gMO-EG-q5Y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIu-k7-XY0">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -831,6 +1018,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveStep:" destination="bgW-1Y-Jyz" eventType="touchUpInside" id="mrR-b4-F87"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cD-q1-gW0">
                                 <constraints>
@@ -899,6 +1089,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SSJ-PQ-Pbm"/>
+                    <connections>
+                        <outlet property="arriveBy" destination="DcJ-gw-ovl" id="dvR-Pk-9kM"/>
+                        <outlet property="departAt" destination="ELf-6e-WEB" id="JMA-16-8s3"/>
+                        <outlet property="endLocation" destination="LEL-YK-RAf" id="MKq-qa-k5M"/>
+                        <outlet property="hour" destination="9DL-CR-qxP" id="dnO-pl-I40"/>
+                        <outlet property="minute" destination="GUf-Ni-FPd" id="EfP-mS-OMZ"/>
+                        <outlet property="startLocation" destination="p24-xn-2fM" id="LwR-bg-rXK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDO-DG-Wxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1112,6 +1310,32 @@
         <image name="second" width="16" height="16"/>
     </resources>
     <classes>
+        <class className="BartStepViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BartStepViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveStep:"/>
+                <relationship kind="action" name="selectTimeType:"/>
+                <relationship kind="outlet" name="arriveBy" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="departAt" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="endLocation" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="hour" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="minute" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="startLocation" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CaltrainStepViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CaltrainStepViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveStep:"/>
+                <relationship kind="action" name="selectTimeType:"/>
+                <relationship kind="outlet" name="arriveBy" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="departAt" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="endLocation" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="hour" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="minute" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="startLocation" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="HomeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
             <relationships>
@@ -1119,17 +1343,59 @@
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
+        <class className="MuniStepViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MuniStepViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveStep:"/>
+                <relationship kind="action" name="selectTimeType:"/>
+                <relationship kind="outlet" name="arriveBy" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="departAt" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="endLocation" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="hour" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="minute" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="startLocation" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="NewTripViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NewTripViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addStep:"/>
+                <relationship kind="outlet" name="nameInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saturdayButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sundayButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="weekdayButton" candidateClass="UIButton"/>
+            </relationships>
         </class>
         <class className="SecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
         </class>
         <class className="StepsMenuViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StepsMenuViewController.h"/>
+        </class>
+        <class className="TripViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TripViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="remove:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="tripText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VTAStepViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VTAStepViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveStep:"/>
+                <relationship kind="action" name="selectTimeType:"/>
+                <relationship kind="outlet" name="arriveBy" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="departAt" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="endLocation" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="hour" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="minute" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="startLocation" candidateClass="UITextField"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1138,7 +1404,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="5hO-cW-MPc"/>
-        <segue reference="V55-Uf-qOC"/>
+        <segue reference="982-OG-jre"/>
+        <segue reference="pXR-6J-KVu"/>
+        <segue reference="p2b-Z7-xig"/>
     </inferredMetricsTieBreakers>
 </document>

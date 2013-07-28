@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3B38FCC17A55CA700424719 /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B38FCB17A55CA700424719 /* TripViewController.m */; };
 		D3BD6AB717A46CDC006DB93C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6AB617A46CDC006DB93C /* UIKit.framework */; };
 		D3BD6AB917A46CDC006DB93C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6AB817A46CDC006DB93C /* Foundation.framework */; };
 		D3BD6ABB17A46CDC006DB93C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BD6ABA17A46CDC006DB93C /* CoreGraphics.framework */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3B38FCA17A55CA700424719 /* TripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripViewController.h; sourceTree = "<group>"; };
+		D3B38FCB17A55CA700424719 /* TripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripViewController.m; sourceTree = "<group>"; };
 		D3BD6AB317A46CDC006DB93C /* viaggi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaggi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BD6AB617A46CDC006DB93C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D3BD6AB817A46CDC006DB93C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -185,6 +188,8 @@
 				D3BD6AFF17A4C3C8006DB93C /* ViaggiModel.xcdatamodeld */,
 				D3BD6AD117A46CDC006DB93C /* HomeViewController.h */,
 				D3BD6AD217A46CDC006DB93C /* HomeViewController.m */,
+				D3B38FCA17A55CA700424719 /* TripViewController.h */,
+				D3B38FCB17A55CA700424719 /* TripViewController.m */,
 				D3BD6AD417A46CDC006DB93C /* first.png */,
 				D3BD6AD617A46CDC006DB93C /* first@2x.png */,
 				D3BD6AD817A46CDC006DB93C /* NewTripViewController.h */,
@@ -371,6 +376,7 @@
 				D3BD6B1617A4CCAA006DB93C /* CustomStepViewController.m in Sources */,
 				D3BD6B1A17A4D8F5006DB93C /* Step.m in Sources */,
 				D3BD6B1D17A4D8F5006DB93C /* Trip.m in Sources */,
+				D3B38FCC17A55CA700424719 /* TripViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +557,7 @@
 				D3BD6AF817A46CDD006DB93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3BD6AF917A46CDD006DB93C /* Build configuration list for PBXNativeTarget "viaggiTests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +566,7 @@
 				D3BD6AFB17A46CDD006DB93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

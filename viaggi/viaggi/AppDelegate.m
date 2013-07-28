@@ -13,10 +13,23 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize currentTrip;
+
+typedef enum tripTypes {
+    CALTRAIN,
+    BART,
+    MUNI,
+    VTA,
+    WALK,
+    CUSTOM_SHUTTLE,
+} TripTypes;
+
+NSArray *translateTypes;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    translateTypes =  [[NSArray alloc] initWithObjects:@"the Caltrain",@"the BART",@"the MUNI",@"the VTA",@"your Shuttle",@"a Walk", nil];
     // Override point for customization after application launch.
     return YES;
 }
@@ -119,6 +132,11 @@
     }
     
     return _persistentStoreCoordinator;
+}
+
+- (NSURL *)applicationDocumentsDirectory
+{
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 
