@@ -2,7 +2,7 @@
 
 class routeInformationGetter
 {
-    public static $googleMapsDirection = "http://maps.googleapis.com/maps/api/directions_json?"; 
+    public static $googleMapsDirectionPrefix = "http://maps.googleapis.com/maps/api/directions/json?"; 
     public $parameters;
     public $timeType;
     public $timeTypeString;
@@ -20,16 +20,16 @@ class routeInformationGetter
         $this->transitLine = $this->parameters["transitLine"];
 
         $this->transitType = "transit"; // Set transit type by default.
-        this->timestamp = $this->parameters["time"];
+        $this->timestamp = $this->parameters["time"];
         $this->startLocation = $this->parameters["startLocation"];
         $this->endLocation = $this->parameters["endLocation"];
 
         switch ($this->timeType) {
             case "startTime":
-                $this->timeTypeString = "&departureTime=$this->timestamp";
+                $this->timeTypeString = "&departure_time=$this->timestamp";
                 break;
             case "endTime":
-                $this->timeTypeString = "&arrivalTime=$this->timeStamp";
+                $this->timeTypeString = "&arrival_time=$this->timeStamp";
             default:
                 $this->returnError("The timeType parameter was invalid.");
         }
@@ -67,7 +67,7 @@ class routeInformationGetter
     public function getBARTInformation ()
     {
         $this->startLocation = "$this->startLocation BART Station";
-        $this->endLocation = "$this->endLocation BART Station;
+        $this->endLocation = "$this->endLocation BART Station".
         $this->makeRequest();
     }
 
@@ -92,14 +92,13 @@ class routeInformationGetter
 
     private function makeRequest ()
     {
-        // 
         // Construct URL parameter.
         $url = $googleMapsDirectionPrefix +
             "origin=$this->startLocation" +
-            "destination=$this->endLocation" +
+            "&destination=$this->endLocation" +
             "&mode=$this->transitType" +
             "&sensor=false" +
-            $this->timeTypeString;
+            "$this->timeTypeString";
         
         // Make the initial cURL call, set URL to download, ask to 
         // return (not print out) the data, ask not to include header,
@@ -109,17 +108,34 @@ class routeInformationGetter
         curl_setopt($request, CURLOPT_HEADER, 1);
 
         $this->response = curl_exec($request);
-        $this->parseResponse();
+        if($this->transitType == "walking")
+	        $this->parseResponse();
     }
 
     private function parseResponse ()
     {
         $parsedResponse = json_decode($this->response);
-
-        $serverResponse = array(
-            "timeForDepart" =>
-            "timeToArrive" => 
-        );
+		$string=file_get_contents($url);
+		$json_response =json_decode($string, $assoc=true);
+		$words = explode(' ', $duration_str); 
+		$hrs = intval($words[0])*360000;
+     	$mins = intval($words[2])*6000;
+		
+		if($this->timeType == 'startTime')
+		{
+        	$serverResponse = array(
+            	"timeForDepart" => ($this->timestamp),
+            	"timeToArrive" => ($this->timestamp+$hrs+$mins)
+        		);
+        }
+        else
+        {
+        	$serverResponse = array(
+            	"timeForDepart" => ($this->timestamp-$hrs-$mins),
+            	"timeToArrive" => ($this->timestamp)
+        		);
+        }
+        
     }
 
     private function returnSuccess ()
